@@ -1,3 +1,4 @@
+//ê²¹ì³ì§€ëŠ” ì„ ì˜ ê¸¸ì´ë¥¼ êµ¬í•˜ëŠ” ë¬¸ì œ
 package baekjoon;
 
 import java.io.IOException;
@@ -20,17 +21,17 @@ public class length_of_overlapping_lines {
 		Arrays.sort(lines, (o1, o2)->{
 			return o1[0] - o2[0];
 		});
-		//Á¡ÀÇ ÃÖ¼Ò°ª
+		//ì ì˜ ìµœì†Œê°’
 		int min = lines[0][0];
 		Arrays.sort(lines, (o1, o2)->{
 			return o2[1]-o1[1];
 		});
-		//Á¡ÀÇ ÃÖ´ë°ª
+		//ì ì˜ ìµœëŒ€ê°’
 		int max = lines[0][1];
 		
-		//0°úÀÇ Â÷ÀÌ
+		//0ê³¼ì˜ ì°¨ì´
 		int bt = 0-min;
-		//ÃÖ¼Ò¸¦ 0À¸·Î ¸ÂÃç¼­ ´Ù ¶¯±ä´Ù
+		//ìµœì†Œë¥¼ 0ìœ¼ë¡œ ë§ì¶°ì„œ ë‹¤ ë•¡ê¸´ë‹¤
 		for(int i=0; i<3; i++) {
 			lines[i][0] += bt;
 			lines[i][1] += bt;
