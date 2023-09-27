@@ -14,7 +14,7 @@ public class binaryNumber_plus {
 		int size_1 = bin1.length()-1;
 		int size_2 = bin2.length()-1;
 		
-		//10Áø¼ö·Î ¹Ù²ãÁÖ±â
+		//10ì§„ìˆ˜ë¡œ ë³€í™˜
 		for(int i=size_1; i>=0; i--) {
 			int s = Character.getNumericValue(bin1.charAt(i));
 			bin1_10 +=(s)*two_1;
@@ -28,14 +28,14 @@ public class binaryNumber_plus {
 		}
 		
 		int value = bin1_10 + bin2_10;
-		//2Áø¼ö·Î ´Ù½Ã º¯È¯
+		//2ì§„ìˆ˜ë¡œ ë³€í™˜
 		String value_b = "";
 		while(value!=0) {
 			int n = 0;
 			value_b += Integer.toString(value%2);
 			value /= 2;
 		}
-		//´ãÀº°Å ¿ª¼øÀ¸·Î
+		
 		for(int i=value_b.length()-1; i>=0; i--) {
 			answer += value_b.charAt(i);
 		}
